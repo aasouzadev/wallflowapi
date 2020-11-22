@@ -58,7 +58,8 @@ class ProdutoController {
       .select(
         "produto.descricaocompleta",
         "oferta.preconormal",
-        "oferta.precooferta"
+        "oferta.precooferta",
+        "oferta.datatermino"
       );
     return response.json(produto);
   }
