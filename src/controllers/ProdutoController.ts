@@ -20,7 +20,7 @@ class ProdutoController {
     return response.json(produto);
   }
 
-  async index2(request: Request, response: Response) {
+  async getProducts(request: Request, response: Response) {
     const { id } = request.query;
     const parsedProds = String(id)
       .split(",")
@@ -34,7 +34,6 @@ class ProdutoController {
       )
       .whereIn("produto.id", parsedProds)
       .select(
-        "produto.id",
         "produto.descricaocompleta",
         "produtocomplemento.precovenda"
       );

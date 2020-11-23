@@ -6,7 +6,7 @@ const routes = express.Router();
 const produtoController = new ProdutoController();
 
 routes.get('/produto/:id', produtoController.index);
-routes.get('/produtos/', produtoController.index2);
+routes.get('/produtos/', produtoController.getProducts);
 routes.get('/produto/', produtoController.show);
 routes.get('/oferta/', produtoController.oferta);
 
